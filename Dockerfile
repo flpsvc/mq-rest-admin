@@ -1,3 +1,4 @@
 FROM nginx:latest
 
-COPY ./build /var/www/html
+COPY ./build/ /usr/share/nginx/html/build/
+COPY ./nginx-custom-conf/default.conf /etc/nginx/conf.d/
