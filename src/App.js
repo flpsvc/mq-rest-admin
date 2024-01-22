@@ -1,4 +1,6 @@
 import React from "react";
+import Queues from "./components/Queues";
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -56,8 +58,10 @@ function QueueManagers() {
   return <h2>queue managers</h2>;
 }
 
-function Queues() {
-  return <h2>queues</h2>;
+function IbmQueues() {
+  return (
+    <Queues />
+  )
 }
 
 function Channels() {
