@@ -1,15 +1,12 @@
 import React from "react";
-import Queues from "./pages/Queues";
-import Channels from "./pages/Channels";
-import QueueManager from "./pages/QueueManager";
+import QueueManager from "./components/QueueManager";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -17,44 +14,26 @@ function App() {
     <Router>
       <Navbar />
       <Switch>
-        <Route exact path="/">
+        <Route path="/home">
           <Home />
         </Route>
-        <Route path="/queue-managers">
+        <Route path="/queue-managers/tu">
           <QueueManager />
         </Route>
-        <Route path="/queues">
-          <Queues />
+        <Route path="/queue-managers/ti">
+          <QueueManager />
         </Route>
-        <Route path="/channels">
-          <Channels />
-        </Route>        
+        <Route path="/queue-managers/tu">
+          <QueueManager />
+        </Route>
       </Switch>
       <Footer />
     </Router>
   );
 }
 
-function Home() {
-  return <h2>Home</h2>;
-}
-
-function IbmQueueManager() {
-  return (
-    <QueueManager />
-  )
-}
-
-function IbmQueues() {
-  return (
-    <Queues />
-  )
-}
-
-function IbmChannels() {
-  return(
-    <Channels />  
-  )
+function Home(){
+  return <h1>Home</h1>
 }
 
 export default App

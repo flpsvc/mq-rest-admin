@@ -1,4 +1,4 @@
-.queueManagerTable{
+.queueManagerTitleTable{
     table {
         font-family: arial, sans-serif;
         border-collapse: collapse;
@@ -14,4 +14,10 @@
       tr:nth-child(even) {
         background-color: #dddddd;
       }
+}
+
+.objs{
+  div {
+    align-content: center;
+  }
 }

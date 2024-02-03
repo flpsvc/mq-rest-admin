@@ -1,22 +1,27 @@
 import {Link} from "react-router-dom";
 import styles from "./Navbar.module.css"
 
-function Navbar({name, type, depth}){
+function Navbar(){
     return(
-        <ul className={styles.list}>
-            <li className={styles.item}>
-            <Link to="/">Home</Link>
+        <nav>
+        <ul>
+            <li><Link to="/home">home</Link></li>                                
+            <li>
+                <a>queue managers</a>
+                <ul>
+                    <li>
+                        <Link to="/queue-managers/tu">TU</Link>
+                    </li>
+                    <li>
+                        <Link to="/queue-managers/ti">TI</Link>
+                    </li>
+                    <li>
+                        <Link to="/queue-managers/ho">HML</Link>
+                    </li>
+                </ul>
             </li>
-            <li className={styles.item}>
-            <Link to="/queue-managers">queue managers</Link>
-            </li>
-            <li className={styles.item}>
-            <Link to="/queues">queues</Link>
-            </li>
-            <li className={styles.item}>
-            <Link to="/channels">channels</Link>
-            </li>
-      </ul>
+        </ul>
+    </nav>
     )
 }
 
