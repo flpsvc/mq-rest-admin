@@ -1,0 +1,11 @@
+footer {
+    position: fixed;
+    padding-bottom: 16px;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #000000;   
+    color: #ffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+}

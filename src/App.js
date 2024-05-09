@@ -1,5 +1,5 @@
 import React from "react";
-import QueueManager from "./components/QueueManager";
+import QmBare from "./components/QmBare";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 
@@ -9,22 +9,16 @@ import {
   Route
 } from "react-router-dom";
 
-function App() {
+function App(env) {
   return (
     <Router>
       <Navbar />
       <Switch>
-        <Route path="/home">
+        <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/queue-managers/tu">
-          <QueueManager />
-        </Route>
-        <Route path="/queue-managers/ti">
-          <QueueManager />
-        </Route>
-        <Route path="/queue-managers/tu">
-          <QueueManager />
+        <Route path="/qmgr/tu/QM.BARE.TU">
+          <QmBare />
         </Route>
       </Switch>
       <Footer />
@@ -32,8 +26,8 @@ function App() {
   );
 }
 
-function Home(){
-  return <h1>Home</h1>
+function Home() {
+  return <h1>Bem-vindo</h1>
 }
 
 export default App
